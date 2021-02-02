@@ -599,53 +599,58 @@
                                 <p class="mb-0">When forced indoors, I often binge watch series, although, these days I
                                     have
                                     picked up
-                                    baking. This has led me to force feed cakes & cookies which I bake to my family (pun
+                                    baking. This has led me to force feed cakes & cookies to my family (pun
                                     intended).
                                     Also, I really enjoy bollywood dancing.
                                 </p> &nbsp; &nbsp;
                                 <p class="mb-0">Here are some select snaps of mine!</p>
                             </div>
+
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <div class="w3-content w3-display-container">
+
+                                <img class="mySlides" src="assets/img/beach.jpg" style="width:100%">
+                                <img class="mySlides" src="assets/img/para.jpg" style="width:100%">
+                                <img class="mySlides" src="assets/img/kayak.JPG" style="width:100%">
+                                <img class="mySlides" src="assets/img/desert.jpeg" style="width:100%">
+
+                                <img class="mySlides" src="assets/img/boat.jpg" style="width:100%">
+                                <img class="mySlides" src="assets/img/bud.jpeg" style="width:100%">
+
+                                <img class="mySlides" src="assets/img/dance2.JPG" style="width:100%">
+                                <img class="mySlides" src="assets/img/dance1.JPG" style="width:100%">
+
+                                <button class="w3-button w3-yellow w3-display-left"
+                                    onclick="plusDivs(-1)">&#10094;</button>
+                                <button class="w3-button w3-yellow w3-display-right"
+                                    onclick="plusDivs(1)">&#10095;</button>
+
+                            </div>
+
+                            <script>
+                                var slideIndex = 1;
+                                showDivs(slideIndex);
+
+                                function plusDivs(n) {
+                                    showDivs(slideIndex += n);
+                                }
+
+                                function showDivs(n) {
+                                    var i;
+                                    var x = document.getElementsByClassName("mySlides");
+                                    if (n > x.length) { slideIndex = 1 }
+                                    if (n < 1) { slideIndex = x.length }
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";
+                                    }
+                                    x[slideIndex - 1].style.display = "block";
+                                }
+                            </script>
+
+
+
                         </div>
                     </div>
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <div class="w3-content w3-display-container">
-
-                        <img class="mySlides" src="assets/img/beach.jpg" style="width:70%">
-                        <img class="mySlides" src="assets/img/para.jpg" style="width:70%">
-                        <img class="mySlides" src="assets/img/kayak.JPG" style="width:70%">
-                        <img class="mySlides" src="assets/img/desert.jpeg" style="width:70%">
-
-                        <img class="mySlides" src="assets/img/boat.jpg" style="width:70%">
-                        <img class="mySlides" src="assets/img/bud.jpeg" style="width:70%">
-
-                        <img class="mySlides" src="assets/img/dance2.JPG" style="width:70%">
-                        <img class="mySlides" src="assets/img/dance1.JPG" style="width:70%">
-
-                        <button class="w3-button w3-yellow w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                        <button class="w3-button w3-yellow w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-
-                    </div>
-
-                    <script>
-                        var slideIndex = 1;
-                        showDivs(slideIndex);
-
-                        function plusDivs(n) {
-                            showDivs(slideIndex += n);
-                        }
-
-                        function showDivs(n) {
-                            var i;
-                            var x = document.getElementsByClassName("mySlides");
-                            if (n > x.length) { slideIndex = 1 }
-                            if (n < 1) { slideIndex = x.length }
-                            for (i = 0; i < x.length; i++) {
-                                x[i].style.display = "none";
-                            }
-                            x[slideIndex - 1].style.display = "block";
-                        }
-                    </script>
-
 
         </section>
 

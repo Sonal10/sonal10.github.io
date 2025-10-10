@@ -685,7 +685,7 @@ Served at this position from September 2023 - June 2025 and interacted with 50+ 
                                 <p class="mb-0">A few moments captured from the beautiful places I’ve explored!</p>
                             </div>
 
-                            &nbsp; &nbsp; &nbsp; &nbsp;
+                           
                             
                           <!-- Edited from here : Photo Carousel (Bootstrap) -->
                             <div id="photoCarousel" class="carousel slide" data-ride="carousel" data-interval="false" data-pause="hover">
@@ -731,7 +731,24 @@ Served at this position from September 2023 - June 2025 and interacted with 50+ 
                             
                             <!-- Optional: constrain height while keeping images responsive -->
                             <style>
-                              #photoCarousel img { object-fit: cover; max-height: 520px; }
+                              /* Fix carousel height & prevent up/down jumps */
+                              #photoCarousel { position: relative; }
+                            
+                              /* Set a consistent height per breakpoint */
+                              #photoCarousel .carousel-item { height: 320px; }            /* phones */
+                              @media (min-width: 576px) { #photoCarousel .carousel-item { height: 380px; } }  /* sm */
+                              @media (min-width: 768px) { #photoCarousel .carousel-item { height: 440px; } }  /* md */
+                              @media (min-width: 992px) { #photoCarousel .carousel-item { height: 520px; } }  /* lg+ */
+                            
+                              /* Make images cover that box without stretching */
+                              #photoCarousel .carousel-item > img {
+                                position: absolute; top: 0; left: 0;
+                                width: 100%; height: 100%;
+                                object-fit: cover;
+                              }
+                            
+                              /* Optional: ensure indicators don’t affect height */
+                              #photoCarousel .carousel-indicators { bottom: 8px; }
                             </style>
                             
                             <!-- Edited until here -->
